@@ -1,0 +1,44 @@
+<div class="example-container">
+  <div class="form-container">
+    <form [formGroup]="registrationForm" (submit)="submit(registrationForm)">
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label> UserName
+        </mat-label>
+        <input matInput formControlName="username" required>
+        <mat-error *ngIf="registrationForm.controls.username.touched && registrationForm.controls.username.invalid">
+          <span *ngIf="registrationForm.controls.username.errors.pattern">This field is invalid.</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label> E-mail
+        </mat-label>
+        <input matInput formControlName="email" required>
+        <mat-error *ngIf="registrationForm.controls.email.touched && registrationForm.controls.email.invalid">
+          <span *ngIf="registrationForm.controls.email.errors.required">This field is mandatory.</span>
+          <span *ngIf="registrationForm.controls.email.errors.pattern">This field is invalid.</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label> Password
+        </mat-label>
+        <input matInput formControlName="password" type="password">
+        <mat-error *ngIf="registrationForm.controls.password.touched && registrationForm.controls.password.invalid">
+          <span *ngIf="registrationForm.controls.password.errors.required">This field is mandatory.</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label>Confirme Password
+        </mat-label>
+        <input matInput formControlName="confirmePassword" type="password">
+        <mat-error *ngIf="registrationForm.controls.confirmePassword.touched && registrationForm.controls.confirmePassword.invalid">
+          <span *ngIf="registrationForm.controls.confirmePassword.errors.required">This field is mandatory.</span>
+        </mat-error>
+      </mat-form-field>
+      <span *ngIf="errorMess" style="color: brown">The password does not match</span>
+      <span *ngIf="errormessemail" style="color: brown">This email has already been used</span><br><br>
+      <button mat-raised-button color="primary" type="submit">Registration</button>
+      <button mat-button [routerLink]="['/']">Back</button>
+
+    </form>
+  </div>
+</div>

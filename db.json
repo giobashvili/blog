@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "username": "giga",
+      "email": "gigaiobashvili33@gmail.com",
+      "password": "giga",
+      "id": 1
+    },
+    {
+      "username": "giga",
+      "email": "gigaiobashvili@gmail.com",
+      "password": "irakli",
+      "id": 2
+    },
+    {
+      "username": "giga",
+      "email": "giga@gmail.com",
+      "password": "123",
+      "id": 3
+    }
+  ]
+}
