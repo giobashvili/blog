@@ -29,13 +29,14 @@ export class RegistrationComponent implements OnInit {
     });
     this.getUsers();
   }
-
+// Get All Users //
   getUsers(){
     this.registrationService.getUsers().subscribe(res => {
       this.usersData = res;
       console.log(this.usersData);
     });
   }
+  // Created Users //
   registration(registrationForm){
     this.registrationService.registration(registrationForm.value).subscribe(res => {
     });
@@ -45,7 +46,7 @@ export class RegistrationComponent implements OnInit {
     this.Check(registrationForm);
 
   }
-
+// ∑Check Email //
   Check(registrationForm){
     for (let i = 0; i < this.usersData.length; i++) {
       const element = this.usersData[i];
@@ -55,6 +56,7 @@ export class RegistrationComponent implements OnInit {
         return false;
       }
     }
+    // Check Confirm Password //
     if (this.registrationForm.value.password !== this.registrationForm.value.confirmePassword) {
         this.errorMess = true;
         this.errormessemail = false;
