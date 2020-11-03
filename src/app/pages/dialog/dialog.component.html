@@ -1,0 +1,22 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Category</mat-label>
+    <input matInput placeholder="Category" name="category" [(ngModel)]="category">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Title</mat-label>
+    <input matInput placeholder="Title" name="title" [(ngModel)]="title">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Description</mat-label>
+    <input matInput placeholder="Description" name="desc" [(ngModel)]="desc">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Story</mat-label>
+    <textarea matInput placeholder="Story" name="story" [(ngModel)]="story"></textarea>
+  </mat-form-field>
+  <a mat-stroked-button href="/myBlog" (click)="updata()">Save</a>
+  <button mat-flat-button mat-dialog-close>Close</button>
+</form>

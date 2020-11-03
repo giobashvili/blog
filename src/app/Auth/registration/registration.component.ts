@@ -33,7 +33,6 @@ export class RegistrationComponent implements OnInit {
   getUsers(){
     this.registrationService.getUsers().subscribe(res => {
       this.usersData = res;
-      console.log(this.usersData);
     });
   }
   // Created Users //
@@ -64,6 +63,6 @@ export class RegistrationComponent implements OnInit {
       }
 
     this.registration(registrationForm);
-    this.RT.navigate(['/']);
+    this.RT.navigate(['/Login']);
   }
 }

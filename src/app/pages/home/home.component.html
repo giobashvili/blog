@@ -1,1 +1,22 @@
-<p>home works!</p>
+<app-header></app-header>
+<!---Home-Section-->
+<div id="container" *ngFor="let blogdata of blogDatas">
+  <a class="card-link" (click)="openDialog(blogdata)">
+    <article class="blog-card">
+      <img class="post-image" src="{{blogdata.image}}"/>
+      <div class="article-details">
+        <h4 class="post-category">{{ blogdata.category }}</h4>
+        <h3 class="post-title">{{ blogdata.title }}</h3>
+        <p class="post-description">{{ blogdata.desc }}</p>
+        <p class="post-author">By {{ blogdata.author }}</p>
+      </div>
+    </article>
+  </a><br>
+</div>
+
+
+
+
+
+
+

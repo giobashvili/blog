@@ -1,0 +1,19 @@
+
+<button class="btn" mat-button routerLink="/AddBlog" *ngIf="error">Please add a blog</button>
+
+<div id="container" *ngFor="let data of blog">
+
+    <article class="blog-card">
+      <img class="post-image" src="{{ data.image }}" />
+      <div class="article-details">
+        <h4 class="post-category">{{ data.category | uppercase }}</h4>
+        <h3 class="post-title">{{ data.title | titlecase }}</h3>
+        <p class="post-description">{{ data.desc | titlecase }}</p>
+        <a mat-stroked-button color="warn" style="margin-right: 5px" href="/myBlog" (click)="delete(data.id)">Delete</a>
+        <button mat-stroked-button color="primary" style="margin-right: 5px" (click)="openDialog(data)">UpData</button>
+        <button mat-stroked-button routerLink="/AddBlog">+</button>
+        <button mat-stroked-button color="primary" routerLink="/" style="margin-right: 5px">Back</button>
+      </div>
+    </article>
+  <br>
+</div>

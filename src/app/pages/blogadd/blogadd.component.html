@@ -1,0 +1,12 @@
+<form #f="ngForm" (ngSubmit)="submit(f)">
+  <input  type="text" class="feedback-input display-input" placeholder="email" name="email"  [(ngModel)]="email"/>
+  <input  type="text" class="feedback-input display-input" placeholder="Author" name="author" [(ngModel)]="author" />
+  <input  type="text" class="feedback-input display-input" placeholder="Author" name="image" [(ngModel)]="data" />
+  <input type="text" class="feedback-input" placeholder="Category" name="category" ngModel/>
+  <input type="text" class="feedback-input" placeholder="Title" name="title" ngModel/>
+  <input  type="text" class="feedback-input" placeholder="Short Description" name="desc" ngModel/>
+  <textarea  class="feedback-input" placeholder="Story" name="story" ngModel></textarea>
+  <input type="file" (change)="image($event)"/>
+  <input type="submit" value="Add Blog"/>
+</form>
+

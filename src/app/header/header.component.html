@@ -1,0 +1,24 @@
+<nav>
+  <div class="logo">
+    <a href="index.html">High<em>way</em></a>
+  </div>
+  <div class="menu">
+    <button *ngIf="!username" mat-stroked-button routerLink="/Login">LOGIN</button>
+    <button *ngIf="username" style="color:white; margin-right: 5px" mat-stroked-button routerLink="/myBlog">My BLogs</button>
+    <button *ngIf="username" style="color:white;" mat-stroked-button routerLink="/AddBlog">+</button>
+    <a mat-button href="/" *ngIf="username" (click)="logOut()" style="color: white">LogOut</a>
+
+  </div>
+</nav>
+
+<div id="video-container">
+  <div class="video-overlay"></div>
+  <div class="video-content">
+    <div class="inner">
+      <h1 *ngIf="username">HI! {{ username }} SEE YOUR BLOG </h1>
+    </div>
+  </div>
+  <video autoplay="" loop="" muted>
+    <source src="assets/highway-loop.mp4" type="video/mp4" />
+  </video>
+</div>

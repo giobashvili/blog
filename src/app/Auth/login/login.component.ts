@@ -30,17 +30,13 @@ export class LoginComponent implements OnInit {
   getUsers() {
     this.registr.getUsers().subscribe(res => {
       this.userData = res;
-      console.log(this.userData);
     });
   }
-
-
 
   submit() {
     if (!this.loginForm.valid) {
       return;
     }
-    console.log(this.loginForm.value);
     this.check();
   }
   // check email and passsword //
@@ -48,7 +44,9 @@ export class LoginComponent implements OnInit {
     for (let i = 0; i < this.userData.length; i++){
         const element = this.userData[i];
         if ( element.email === this.loginForm.value.email && element.password === this.loginForm.value.password){
-          this.RT.navigate(['/Home']);
+          localStorage.setItem('email', element.email);
+          localStorage.setItem('username', element.username);
+          this.RT.navigate(['/']);
           return false;
         }
       }
