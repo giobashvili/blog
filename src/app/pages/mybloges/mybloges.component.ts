@@ -51,7 +51,7 @@ export class MyblogesComponent implements OnInit {
   }
 
   delete(id){
-    this.http.delete('http://localhost:3000/blogs/' + id).subscribe(res =>{
+    this.service.delete(id).subscribe(res =>{
     })
   }
 

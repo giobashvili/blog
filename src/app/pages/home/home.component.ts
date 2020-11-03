@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ServiceService} from "../../Service/service.service";
 import {DialogComponent} from "../dialog/dialog.component";
 import {MatDialog} from "@angular/material/dialog";
-import {DialogReadComponent} from "../../dialog-read/dialog-read.component";
+import {DialogReadComponent} from "../dialog-read/dialog-read.component";
 
 @Component({
   selector: 'app-home',

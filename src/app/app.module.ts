@@ -10,6 +10,8 @@ import { RegistrationComponent } from './Auth/registration/registration.componen
 import { HomeComponent } from './pages/home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {  FormControl, FormsModule } from '@angular/forms';
+import { DialogComponent } from './pages/dialog/dialog.component';
+import { DialogReadComponent } from './pages/dialog-read/dialog-read.component';
 
 // Matreial //
 import { MatButtonModule } from '@angular/material/button';
@@ -21,8 +23,6 @@ import { BlogaddComponent } from './pages/blogadd/blogadd.component';
 import { MyblogesComponent } from './pages/mybloges/mybloges.component';
 import { HeaderComponent } from './header/header.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { DialogComponent } from './pages/dialog/dialog.component';
-import { DialogReadComponent } from './dialog-read/dialog-read.component';
 
 
 

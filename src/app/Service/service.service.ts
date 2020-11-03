@@ -31,6 +31,9 @@ export class ServiceService {
     }
     console.log(data)
       return this.http.put('http://localhost:3000/blogs/' + id,data)
+  }
 
+  delete(id) {
+    return this.http.delete('http://localhost:3000/blogs/' + id)
   }
 }
